@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            list-style: none;
+        }
+        .scrollFrame{
+            width: 800px;
+            height: 500px;
+            border: 1px solid #666;
+            position: relative;
+            /*left: 2000px;*/
+            overflow: hidden;
+        }
+        .scrollContent{
+            width: 3200px;
+            position: absolute;
+        }
+        img{
+            width: 800px;
+            height: 500px;
+            display: block;
+            float: left;
+        }
+        .btns{
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+        }
+        .btns li{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            background: #fff;
+            margin: 0 5px;
+        }
+        li.spotlight{
+            background: #00AFC7;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollFrame">
+        <div class="scrollContent" id="scrollContent">
+            <img src="1.jpg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="3.jpg" alt="">
+            <img src="4.jpg" alt="">
+        </div>
+        <ul class="btns">
+            <li class="spotlight"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var scrollContent=document.querySelector(".scrollContent");
+        var imgObj=document.querySelector(".scrollFrame img");
+        var lis=document.querySelectorAll(".btns li");
+        autoPlay(1);
+        /*图片的索引值，每次向上移动移动的是图片高度的倍数*/
+        function autoPlay(index){
+            timer=setInterval(function(){
+                //scrollContent.style.left=-imgObj.offsetWidth*index+"px";
+                var frames=[
+                    {"left":-(imgObj.offsetWidth*(index-1))+"px",
+                     "opacity":0.4
+                    },
+                    {"left":-(imgObj.offsetWidth*index)+"px",
+                     "opacity":1
+                    }
+                ];
+                var timing={
+                    duration:1000,
+                    delay:1,
+                    iterations:1,
+                    direction:"normal",
+                    easing:'ease-in-out',
+                    fill:'forwards'
+                };
+                scrollContent.animate(frames,timing);
+                for (var i=0;i<lis.length;i++){
+                    lis[i].className="";
+                }
+                //为当前lis添加样式
+                lis[index].className="spotlight";
+                index++;
+                //限定index的范围
+                if(index==lis.length){
+                    index=0
+                }
+            },3000)
+        }
+    </script>
+</body>
+</html>

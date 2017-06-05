@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var str="google,baidu";
+        var pattern=/(goo)(gle),(baidu)/gi;
+        //   \d代表[0-9]    \D代表[非数字]    \w代表[A-Za-z和_]   \W代表非[A-Za-z]  .匹配[非空任意字符]  \.转义为普通的点 \s代表空格
+        console.log(str.match(pattern));
+        console.log(RegExp.$1);
+        console.log(RegExp.$2);
+        console.log(RegExp.$3);
+    </script>
+</body>
+</html>

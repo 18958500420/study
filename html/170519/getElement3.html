@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="main">
+        <div class="first"></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
+    </div>
+    <div class="demo"></div>
+    <script>
+        var main=document.querySelector(".main");
+        var divs=main.querySelectorAll("div:not(.first)");
+        console.log(divs);
+    </script>
+</body>
+</html>

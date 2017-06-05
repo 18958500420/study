@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+                border: 1px solid green;
+        }
+        img{
+            border: 0;
+            height: 108px;
+        }
+        .scroll{
+            width: 434px;
+            height: 110px;
+            margin: 0 auto;
+            border: 1px solid green;
+            position: relative;
+        }
+        .scroll .wrap{
+            height: 108px;
+            position: relative;
+            overflow: hidden;
+        }
+        .scroll ul{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1500px;
+            border: 1px solid red;
+        }
+        .scroll ul li{
+            float: left;
+            height: 108px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--<ul class="demo">
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+</ul>-->
+<div class="scroll">
+    <div class="wrap">
+        <ul>
+            <li><img src="1.jpg"></li>
+            <li><img src="2.jpg"></li>
+            <li><img src="3.jpg"></li>
+            <li><img src="4.jpg"></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var scroll=document.querySelector(".scroll");
+    var ul=document.querySelectorAll(".wrap ul")[0];
+    ul.innerHTML+=ul.innerHTML;
+    //位left赋一个初始值
+    var left=parseInt(ul.style.left)||0;
+    var imgWidth=document.querySelector(".wrap ul li img").offsetWidth;
+    //console.log(imgWidth.offsetWidth);
+    //ul.style.left="-"+imgWidth*4+"px";
+    setInterval(function(){
+        left--;
+        if (left<="-"+imgWidth*4){
+            left=0;
+        }
+        ul.style.left=left+"px";
+        console.log(left)
+    },1);
+    console.log(left);
+</script>
+<!--<script type="text/javascript">
+    var demo=document.querySelector(".demo");
+    demo.innerHTML+=demo.innerHTML;
+    console.log(typeof demo);
+</script>-->
+</body>
+</html>

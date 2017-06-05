@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .demo{
+            width: 300px;
+            height: 100px;
+            border: 1px solid darkcyan;
+            position: absolute;
+        }
+        .demo2{
+            width: 300px;
+            height: 100px;
+            border: 1px solid darkcyan;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo"></div>
+    <div class="demo2"></div>
+    <script>
+            var demo=document.querySelector(".demo");
+            center(demo);
+            /*function center(element){
+                demo.style.left=(getWindowSiza().width-element.offsetWidth)/2+"px";
+                demo.style.top=(getWindowSiza().height-element.offsetHeight)/2+"px";
+            }
+            function getWindowSiza(){
+                return  {
+                    "width":window.innerWidth||document.documentElement.clientWidth,
+                    "height":window.innerHeight||document.documentElement.clientHeight
+                };
+            }*/
+            console.log(getWindowSiza().width);
+            console.log(getWindowSiza().height);
+    </script>
+</body>
+</html>

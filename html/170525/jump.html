@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a class="btn" href="#">123</a>
+    <img src="#" class="pic">
+<script type="text/javascript">
+    var btn=document.querySelector(".btn");
+    var pic=document.querySelector(".pic");
+    btn.addEventListener("click",function(evt){
+        evt.preventDefault();
+        pic.style.display="block";
+    })
+</script>
+</body>
+</html>

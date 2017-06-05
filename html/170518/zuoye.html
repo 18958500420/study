@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .clock{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock"></div>
+    <div class="clock2"></div>
+    <script>
+        var clock=document.querySelector(".clock");
+        var clock2=document.querySelector(".clock2");
+        setInterval(function(){
+            var d=new Date();
+            var h= d.getHours();
+            var m= d.getMinutes();
+            var s= d.getSeconds();
+            var sj=h;
+            if(sj>=6&&sj<=10){
+                clock2.innerHTML="&ensp;&ensp;&ensp;&ensp;"+"早上好";
+            }else if(sj>=11&&sj<=14){
+                clock2.innerHTML="&ensp;&ensp;&ensp;&ensp;"+"中午好";
+            }else if(sj>=15&&sj<=17){
+                clock2.innerHTML="&ensp;&ensp;&ensp;&ensp;"+"下午好";
+            }else if(sj>=18&&sj<=24){
+                clock2.innerHTML="&ensp;&ensp;&ensp;&ensp;"+"晚上好";
+            }else {
+                clock2.innerHTML="&ensp;&ensp;&ensp;&ensp;"+"多晚了还不睡";
+            }
+           clock.innerHTML="现在时间:"+h+":"+m+":"+s;
+        },1000)
+    </script>
+</body>
+</html>

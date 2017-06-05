@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        window.open("ad.html","newname","width=300,left=500,top=150");
+        console.log(window);
+        window.addEventListener("resize",function(){
+            console.log(new Date().toDateString());
+        });
+        window.addEventListener("scroll",function(){
+            console.log(new Date().toDateString());
+        })
+    </script>
+</body>
+</html>

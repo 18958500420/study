@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Tools.js"></script>
+</head>
+<body>
+    <div class="feedback"></div>
+    <input type="text" placeholder="用户名" class="username"><br>
+    <input type="password" placeholder="密码" class="pwd"><br>
+    <input type="text" name="" placeholder="邮箱" class="email"><br>
+    <script type="text/javascript">
+        var feedback=document.querySelector(".feedback");
+        var email=document.querySelector(".email");
+        var username=document.querySelector(".username");
+        var pwd=document.querySelector(".pwd");
+        email.addEventListener("keyup",function(){
+            if (valide_email(email.value)){
+                feedback.innerHTML="邮箱格式合法"
+            }else {
+                feedback.innerHTML="<span style='color:red'>邮箱格式不合法</span>"
+            }
+        });
+        username.addEventListener("blur",function(){
+            console.log(this.value.length);
+            console.log(trim(this.value).length);
+            console.log(trim(this.value));
+            if(this.value.length==0){
+                feedback.innerHTML="用户名不得为空"
+            }else {
+                feedback.innerHTML="";
+            }
+        });
+            pwd.addEventListener("keyup",function(){
+                switch (valide_pwd(this.value)){
+                    case 3:
+                        feedback.innerHTML="密码强度低";
+                        break;
+                    case 2:
+                        feedback.innerHTML="密码强度中";
+                        break;
+                    case 1:
+                        feedback.innerHTML="密码强度较高";
+                        break;
+                    case 0:
+                        feedback.innerHTML="密码强度高";
+                        break;
+                }
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="1.jpg">
+    <script>
+        var image=document.querySelector("img");
+        var num=1;
+        setInterval(function(){
+            //console.log(num);
+            image.src=num+".jpg";
+            num++;
+            if (num==5){
+                num=1
+            }
+        },1000);
+    </script>
+</body>
+</html>

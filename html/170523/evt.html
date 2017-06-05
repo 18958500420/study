@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        html{
+            background: red;
+        }
+        body{
+            background: lightyellow;
+        }
+        .xiaoshi{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">button</button>
+    <img src="1234.jpg" class="xiaoshi">
+    <script type="text/javascript">
+        var img=document.querySelector(".xiaoshi");
+        var btn=document.querySelector(".btn");
+        var html=document.querySelector("html");
+        html.addEventListener("click",msg);
+        function msg(){
+            console.log("hello")
+        }
+        /*window.addEventListener("load",function(){
+            console.log(1);
+        });
+        window.addEventListener("load",function(){
+            console.log(2);
+        });*/
+        /*html.addEventListener("click",function(){
+            console.log("333");
+        });
+        btn.onclick=function(){
+          console.log(new Date().toLocaleTimeString());
+        };
+        img.onclick=disappear;
+        function disappear(){
+            this.style.display="none";
+        }*/
+        /*image.onclick=function(){
+            this.style.display="none";
+        }*/
+    </script>
+</body>
+</html>

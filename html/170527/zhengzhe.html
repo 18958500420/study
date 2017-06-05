@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<script type="text/javascript">
+        var str="您好，按揭贷款是http://www.baidu.com可是肯德基";
+        document.write(str+"<hr>");
+        var pattern=/(http):\/\/(www)\.([a-z]+)\.(com)/gm;
+        document.write(str.replace(pattern,"<a href='$1://$2.$3.$4'>$1://$2.$3.$4</a>"))
+    </script>-->
+
+    <script type="text/javascript">
+        var str="当你看钢铁侠的时候，你会觉得，哇哦，[b]新战甲好帅[/b]，但是呢，仅此而已，[i]你不是超级富二代[/i]，[b][color=red]你不是超级天才科学家[/color][/b]，[b]钢铁侠的烦恼甚至在你看来都是幸福的烦恼[/b]。当你看超人的时候，你的反应，卧槽，[b][color=green]他连这个都举得起来[/color][/b]，卧槽，这个都打不死他。但是呢，仅此而已，你不是从小就被赋予使命的外星小孩。但是当你看到蜘蛛侠的时候，你的一部分与这个英雄产生了共鸣，是的，我们也懒得天天上学迟到，是的，我们也有一个日思夜想但是遥不可及的女神，是的，我们的真实身份在社会中也是沧海一粟，是的，我们也有一个狂暴的老板，是的，我们也在为自己做的错误决定而无能为力而痛苦着。更重要的是，尽管生活如此艰辛，但是我们和小蜘蛛一样，碰到困难会尽量让自己笑起来，打打嘴炮，告诉自己，看，其事他也不是无敌的嘛。";
+        document.write(str+"<hr>");
+        var pattern=new Array(
+                /\[b\](.+?)\[\/b\]/gmi,
+                /\[i\](.+?)\[\/i\]/gmi,
+                /\[color=(.+?)\](.+?)\[\/color\]/gmi
+        );
+        //console.log(str.match(pattern))
+        var replacement=new Array("<strong>$1</strong>","<i>$1</i>","<span style='color:$1'>$2</span>");
+        for (i in pattern){
+            str=str.replace(pattern[i],replacement[i]);
+        }
+        document.write(str)
+    </script>
+</body>
+</html>

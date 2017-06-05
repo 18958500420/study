@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" name="" id="male">
+<hr>
+<input type="checkbox" name=""><br>
+<input type="checkbox" name=""><br>
+<input type="checkbox" name=""><br>
+<input type="checkbox" name=""><br>
+<input type="checkbox" name=""><br>
+<input type="checkbox" name=""><br>
+<input type="checkbox" name=""><br>
+<input type="checkbox" name=""><br>
+<script type="text/javascript">
+    var male=document.querySelector("#male");
+    var inputs=document.querySelectorAll("input:not(#male)");
+    var b=true;
+    console.log(inputs);
+    male.addEventListener("click",function(){
+        if (this.checked){
+            inputs.forEach(function (value) {
+                value.checked=true;
+            })
+        }else {
+            inputs.forEach(function (value) {
+                value.checked=false;
+            })
+        }
+    })
+</script>
+</body>
+</html>

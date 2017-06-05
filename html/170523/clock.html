@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../170522/Tools.js"></script>
+</head>
+<body>
+    <div class="clock">
+        <img src="image/0.JPG">
+        <img src="image/0.JPG">
+        <img src="image/c.JPG">
+        <img src="image/0.JPG">
+        <img src="image/0.JPG">
+        <img src="image/c.JPG">
+        <img src="image/0.JPG">
+        <img src="image/0.JPG">
+    </div>
+    <script type="text/javascript">
+        var clock=document.querySelector(".clock");
+        var imgs=document.querySelectorAll(".clock img");
+        console.log(imgs);
+        setInterval(function(){
+            var d=new Date();
+            var h= addZero(d.getHours());
+            var m= addZero(d.getMinutes());
+            var s= addZero(d.getSeconds());
+            var str=h+"c"+m+"c"+s;
+            //clock.innerHTML=str;
+            //每隔一秒钟循环8次，8个事件生成的路径分别赋给8章图片的src。
+            for(var i=0;i<imgs.length;i++){
+                //console.log(imgs[i].src);
+                //console.log(str.charAt(i));
+                imgs[i].src="image/"+str.charAt(i)+".JPG";
+            }
+            //console.log(str);
+        },1000);
+    </script>
+</body>
+</html>

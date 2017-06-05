@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" name="f1">
+        水：<input type="text" name="watch"><br>
+        米：<input type="text" name="rice"><br>
+        总额：<input type="text" name="sum"><br>
+        <input type="button" value="查看" onclick="abc();">
+        <input type="reset">
+    </form>
+    <script>
+        //获取到表单里的各文本框的值
+        //alert(document.f1.watch.value);
+        function abc(){
+            //sum的显示结果是前两者相加
+            document.f1.sum.value=document.f1.watch.value*1+document.f1.rice.value*1
+        }
+    </script>
+</body>
+</html>

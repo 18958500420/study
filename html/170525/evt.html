@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>button</button>
+    <script type="text/javascript">
+        var btn=document.querySelector("button");
+        var html=document.querySelector("html");
+        var body=document.querySelector("body");
+        btn.onclick=function(){
+            var evt=window.Event;
+            alert(evt);
+        }
+        /*html.addEventListener("click",function(){
+            alert("html");
+        });
+        body.addEventListener("click",function(evt){
+            evt.stopPropagation();
+            alert("body");
+        });
+        btn.addEventListener("click",function(evt){
+            evt.stopPropagation();
+            alert("button");
+        });*/
+    </script>
+</body>
+</html>

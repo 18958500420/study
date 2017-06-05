@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">button</button>
+    <script type="text/javascript">
+        var btn=document.getElementById("btn");
+        var member={"username":"tom","gender":"female","add":"水产路"};
+        btn.addEventListener("click",function(){
+           alert(member);
+           console.log(member);
+        });
+        var str="";
+        for (i in member){
+            str+=member[i];
+            alert(member[i]);
+        }
+        console.log(str);
+        /*btn.onclick=function(){
+            window.moveBy(-15,-15);
+        }*/
+    </script>
+</body>
+</html>

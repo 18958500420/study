@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    &lt;a&gt;&lt;/a&gt;
+    <h1 class="hello">hello</h1>
+    <script>
+        var hello=document.querySelector(".hello");
+        console.log(hello.nodeType);
+        console.log(hello.firstElementChild);
+        console.log(hello.nodeName);
+    </script>
+    <!--
+    节点类型：
+            元素节点
+            属性节点
+            文本节点
+            cdata节点
+            实体引用节点
+            实体节点
+            处理指令节点
+            注释节点
+            文档节点
+            文档类型节点
+            部分文档节点
+            DTD声明符号节点
+    节点属性
+            nodeType：节点类型
+            nodeValue:节点值
+            nodeName：节点名称
+            firstChild：第一个子节点
+            childNodes：子节点数组
+            parentNode:父节点
+            previousElementSibling：同级元素紧邻前面一个
+            nextElementSibling：同级元素紧邻后面一个
+
+    节点的方法
+            appendChild();：追加子节点
+            createTextNode();创建文本节点
+            removeChild();：移除子元素
+
+
+        node中如何清除空格
+
+
+    属性
+    属性在元素的开标签中，属性名之间，属性名与标签名之间至少有一个空格。
+    合法和自定义属性
+    属性值既可以获取，也可以赋值。
+    合法属性
+    class要变成className才可以处理元素
+    -->
+</body>
+</html>

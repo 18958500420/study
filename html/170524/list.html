@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .demo{
+            border: 1px solid red;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .demo:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .demo li{
+            float: left;
+            padding: 10px;
+            background: #14b8c7;
+            margin-left: 10px;
+            color: white;
+        }
+        li.active{
+            background: red;
+        }
+        div{
+             width: 100px;
+             height: 100px;
+             float: left;
+             background: #14b8c7;
+             margin-right: 10px;
+             display: none;
+         }
+        div.box{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul class="demo">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>
+</ul>
+<div class="box">one</div>
+<div>two</div>
+<div>three</div>
+<div>four</div>
+<script type="text/javascript">
+    //获取多个list
+    var lis=document.querySelectorAll(".demo li");
+    var divs=document.querySelectorAll("div");
+    //console.log(lis.length);
+    //通过循环为多个元素绑定事件
+    /*for (var i=0;i<lis.length;i++){
+        //循环为每一个lis添加index
+        lis[i].setAttribute("index",i);
+        lis[i].addEventListener("click",function(){
+            for (var j=0;j<lis.length;j++){
+                lis[j].className="";
+                divs[j].className="";
+            }
+            divs[this.getAttribute("index")].className="box";
+            this.className="active";
+        })
+    }*/
+    /*for (var i=0;i<lis.length;i++){
+        (function(index){
+            //dblclick  双击
+            //click     单击
+            lis[index].addEventListener("dblclick",function(){
+                for(var j=0;j<lis.length;j++){
+                    lis[j].className="";
+                    divs[j].className="";
+                }
+                divs[index].className="box";
+                this.className="active";
+            })
+        })(i);
+    }*/
+    lis.forEach(function(value,index){
+        value.addEventListener("click",function(){
+            lis.forEach(function(value,index){
+                //清空所有元素的active
+                value.className="";
+                divs[index].className=""
+            });
+            //为当前的元素添加active
+            value.className="active";
+            divs[index].className="box"
+        });
+    });
+
+</script>
+</body>
+</html>

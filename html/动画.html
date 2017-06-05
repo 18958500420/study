@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        ul{
+            position: relative;
+        }
+        li{
+            list-style: none;
+            font-size: 68px;
+            position: absolute;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: orangered;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        ul>:nth-child(1)>img{
+            width: 140px;
+            position: absolute;
+            left: -180px;
+            top: 25px;
+        }
+        ul>:nth-child(1){
+            width: 140px;
+            animation: mov 5s  infinite;
+            color: white;
+            position: absolute;
+        }
+        ul>:nth-child(2)>img{
+            width: 140px;
+            position: absolute;
+            left: -180px;
+            top: 25px;
+        }
+        ul>:nth-child(2){
+            animation: mov2 5s 2s infinite;
+            position: absolute;
+        }
+        @keyframes mov {
+            0%{ left: -180px}
+            40%{ left: 210px}
+            50%{ left: 210px}
+            60%{ left: 500px}
+            70%{ left: 500px}
+            80%{ left: 500px}
+            90%{ left: 500px}
+            100%{ left: 500px}
+        }
+        @keyframes mov2 {
+            0%{ left: -180px}
+            40%{ left: 210px}
+            50%{ left: 210px}
+            60%{ left: 210px}
+            80%{ left: 500px}
+            100%{ left: 500px}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="../image/ef9452ee3d6d55fbcced9dd66b224f4a20a4dd1f.jpg"></li>
+            <li>
+                <img src="../image/9-1F215101252-51.png">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

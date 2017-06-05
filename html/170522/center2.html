@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Tools.js"></script>
+    <style type="text/css">
+        body{
+            height: 2000px;
+        }
+        .demo{
+            width: 300px;
+            height: 100px;
+            background: darkcyan;
+            position: absolute;
+        }
+        .ad{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="demo"></div>
+    <script>
+        var demo=document.querySelector(".demo");
+        center(demo);
+    </script>-->
+    <img src="11111.jpg" class="ad">
+    <img src="123.jpg">
+    <script>
+        //页面加载结束
+        window.addEventListener("load",function(){
+            //元素居中
+            var ad=document.querySelector(".ad");
+            center(ad);
+        })
+    </script>
+    <script>
+        //页面加载结束
+        window.addEventListener("scroll",function(){
+            //元素居中
+            var ad=document.querySelector(".ad");
+            center(ad);
+        })
+    </script>
+    <script>
+        //页面加载结束
+        window.addEventListener("resize",function(){
+            //元素居中
+            var ad=document.querySelector(".ad");
+            center(ad);
+        })
+    </script>
+</body>
+</html>

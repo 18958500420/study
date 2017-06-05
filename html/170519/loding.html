@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>提交中</button>
+    <style type="text/css">
+        button{
+            width: 150px;
+            background: darkcyan;
+            color: white;
+        }
+        button:after{
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            /*border: 1px solid #14b8c7;*/
+            border-radius: 5px;
+            /*box-shadow: 8px 0 white,16px 0 white,24px 0 white;*/
+            animation: dong infinite 3s backwards step-start;
+        }
+        @keyframes dong {
+            0%{box-shadow: none;}
+            30%{box-shadow: none;}
+            50%{box-shadow: 8px 0 white;}
+            70%{box-shadow: 8px 0 white,16px 0 white;}
+            90%{box-shadow: 8px 0 white,16px 0 white,24px 0 white;}
+            100%{box-shadow: 8px 0 white,16px 0 white,24px 0 white;}
+        }
+    </style>
+</body>
+</html>

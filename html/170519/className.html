@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<div class="demo">333</div>
+    <style type="text/css">
+        .demo{
+            color: red;
+            font-size: 55px;
+        }
+        .active{
+            color: green;
+        }
+    </style>
+    <script>
+        var demo=document.querySelector(".demo");
+        demo.className="demo active";
+    </script>-->
+
+
+    <ul class="demo">
+        <li class="active">one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <img src="timg%20(1).jpg">
+    <style>
+        ul{
+            border: 1px solid #14b8c7;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        li{
+            float: left;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #14b8c7;
+            margin-left: 5px;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+    <script>
+        var lis=document.querySelector(".demo").querySelectorAll("li");
+        console.log(lis);
+        lis.forEach(function(value,index){
+            //console.log(index);
+            value.addEventListener("click",function(){
+                //清空所有的list的active
+                lis.forEach(function(v,j){
+                    v.className="";
+                });
+                //console.log(this)
+                //为当前的list添加active
+                this.className="active";
+            })
+        })
+    </script>
+</body>
+</html>

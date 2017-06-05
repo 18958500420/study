@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select>
+    <option>leo</option>
+    <option>howard</option>
+    <option>bruce</option>
+    <option>neo</option>
+</select>
+<script type="text/javascript">
+    var select=document.querySelector("select");
+    var feedback=document.querySelector(".feedback");
+    select.addEventListener("change",function(){
+        console.log(this.value);
+        feedback.innerHTML=this.value;
+    })
+</script>
+</body>
+</html>

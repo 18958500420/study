@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #pic{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="pic">
+    <label for="pic">上传头像</label>
+    <br>
+    <img src="" id="preview">
+    <script type="text/javascript">
+        var pic=document.querySelector("#pic");
+        var preview=document.querySelector("#preview");
+        var fr=new FileReader();
+        pic.addEventListener("change",function(){
+            //this.files:上传的文件，数组类型
+            //this.files[0];上传的第一个文件；
+            //console.log(this.files[0]);
+            //this.files[0]:上传的文件
+            //readAsDataURL：把上传的人间作为DataURL数据读取
+            //保存到fr中
+            fr.readAsDataURL(this.files[0]);
+            fr.addEventListener("loadend",function(){
+                preview.src=this.result;
+                console.log(this.result);
+            })
+        })
+    </script>
+</body>
+</html>

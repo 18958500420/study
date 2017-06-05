@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var str="按实际来看大神http://www.baidu.com撒即可打开撒看见啦死垃圾第三快乐撒啦" +
+                "就开始卡多久啦http://www.qq.com四六级垃圾袋啊拉三季度垃圾莎克里斯看来老师啦家里看手机拉埃了" +
+                "昆仑大道季度垃圾http://www.abcd.com莎克里斯看来老师啦家里看手机拉埃了";
+        document.write(str+"<hr>");
+        var pattern=/(http):\/\/(www)\.([a-z]+)\.(com)/gm;
+        //console.log(str.match(pattern));
+        //document.write(str.replace(pattern,"<a href='$1://$2.$3.$4'>$1://$2.$3.$4</a>"))
+        document.write(str.replace(pattern,"<a href='$1://$2.$3.$4'>$1://$2.$3.$4</a>"));
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var a=[1,2,3,4,5,6,7,8,9];
+		var abc=a.slice(2,4);		//原数组不变，形成新值
+		var aoe=a.splice(2,6);		//直接操作原数组,形成新值
+		console.log(a);
+		console.log(abc);
+		console.log(aoe);
+		var aa=a.splice(2,0,8,7);
+		console.log(a);
+		var cc=a.splice(2,1,0,0);
+		console.log(a);
+	</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<select class="demo">
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+    </select>
+    <script>
+        var demo=document.querySelector(".demo");
+        demo.addEventListener("change",function(){
+            console.log(this.value);
+            changeColor(this.value);
+        });
+        function changeColor(color){
+           document.body.style.background=color;
+        }
+    </script>-->
+    <script src="Tools.js"></script>
+    <div class="clock"></div>
+    <script>
+        var clock=document.querySelector(".clock");
+        //console.log(clock);
+        setInterval(function(){
+            var d=new Date();
+            var h= d.getHours();
+            var m= d.getMinutes();
+            var s= d.getSeconds();
+            clock.innerHTML=h+":"+m+":"+s;
+        },1000)
+    </script>
+</body>
+</html>

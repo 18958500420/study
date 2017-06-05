@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            background: url("1234.jpg") no-repeat;
+            background-size: 100%;
+        }
+        .tab{
+            /*border: 1px solid red;*/
+        }
+        .tab ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .tab ul:after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+        .tab ul li{
+            float: left;
+            width: 100px;
+            height: 50px;
+            border: 1px solid gray;
+            margin-left: 10px;
+            text-align: center;
+            line-height: 48px;
+        }
+        .tab ul li.active{
+            position: relative;
+            top: 5px;
+            background: white;
+            z-index: 10;
+            border: 1px solid green;
+            border-bottom: 0;
+        }
+        .tab div{
+            height: 200px;
+            display: none;
+            border: 1px solid green;
+        }
+        div.spotlight{
+            display: block;
+            position: relative;
+            background: white;
+            z-index: 9;
+            top: 3px;
+        }
+        .tab ul li span{
+            display: none;
+            width: 0;
+            height: 2px;
+            background: orange;
+            transition: all 1s;
+            margin: 0 auto;
+        }
+        .tab ul li span.bar{
+            display: block;
+            width: 100%;
+            animation: barloading 1s forwards;
+        }
+        @keyframes barloading {
+            0%{width: 0}
+            100%{width: 100%}
+        }
+        /*.tab ul li:hover span{
+            width: 100px;
+            background: orange;
+        }*/
+    </style>
+</head>
+<body>
+
+</body>
+</html>

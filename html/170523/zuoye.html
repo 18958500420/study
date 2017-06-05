@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../170522/Tools.js"></script>
+    <style type="text/css">
+        img{
+            width: 100%;
+        }
+        .hide:after{
+            position: relative;
+            top: 10px;
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-color: black transparent transparent transparent;
+            border-style: solid;
+        }
+        .fold:after{
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-color: transparent transparent black transparent;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn fold">隐藏</button>
+    <img src="tu.jpg" class="image">
+    <script>
+        var btn=document.querySelector(".btn");
+        var img=document.querySelector(".image");
+        var b=true;
+        //方法一    三元
+        /*btn.addEventListener("click",function(){
+            img.style.display=img.style.display=='none'?'':'none'
+        });*/
+        //方法二    if
+        /*btn.addEventListener("click",function(){
+            if (img.style.display=="none"){
+                img.style.display=""
+            }else {
+                img.style.display="none"
+            }
+        });*/
+        /*btn.addEventListener("click",function(){
+            if (b){
+                b=false;
+                img.style.display="none";
+            }else {
+                b=true;
+                img.style.display="block"
+            }
+        });*/
+        btn.addEventListener("click",function(){
+            switch (img.style.display){
+                case "":
+                    img.style.display="none";
+                        this.innerHTML="显示";
+                        this.className="btn hide";
+                    break;
+                case "none":
+                    img.style.display="";
+                        this.innerHTML="隐藏";
+                    this.className="btn fold";
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>

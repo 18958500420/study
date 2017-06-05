@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Tools.js"></script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        body{
+            height: 1500px;
+        }
+        #login{
+            width: 450px;
+            height: 500px;
+            border: 1px solid darkcyan;
+            position: absolute;
+            background: url("timg%20(1).jpg") no-repeat -150px 0;
+            background-size: 180%;
+        }
+        #mask{
+            background: rgba(0,0,0,0.6);
+            position: absolute;
+        }
+        #login>:nth-child(1){
+            flex: 1;
+            height: 200px;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .yh{
+            width: 150px;
+            height: 150px;
+            border: 3px solid #f8cb4a;
+            background: url("user_430px_1204593_easyicon.net.png") no-repeat;
+            background-size: 100%;
+            border-radius: 75px;
+            align-self: center;
+        }
+        /*==========================================*/
+        #login>:nth-child(2){
+            flex: 1;
+            height: 200px;
+        }
+        .yhm{
+            width: 450px;
+            height: 33.33%;
+            display: flex;
+
+        }
+        .yhm>:nth-child(1){
+            flex: 2;
+            font-size: 1.5rem;
+            align-self: center;
+            text-align: right;
+        }
+        .yhm>:nth-child(2){
+            flex: 4;
+            align-self: center;
+        }
+        .yhm-1{
+            width: 80%;
+            height: 1.7rem;
+            font-size: 1.5rem;
+        }
+        .mima{
+            width: 450px;
+            height: 33.33%;
+            display: flex;
+        }
+        .mima>:nth-child(1){
+            flex: 2;
+            font-size: 1.5rem;
+            align-self: center;
+            text-align: right;
+        }
+        .mima>:nth-child(2){
+            flex: 4;
+            align-self: center;
+        }
+        .mima-1{
+            width: 80%;
+            height: 1.7rem;
+            font-size: 1.5rem;
+        }
+        .yzm{
+            width: 450px;
+            height: 33.33%;
+            display: flex;
+        }
+        .yzm>:nth-child(1){
+            flex: 2;
+            font-size: 1.5rem;
+            align-self: center;
+            text-align: right;
+        }
+        .yzm>:nth-child(2){
+            flex: 2;
+            align-self: center;
+        }
+        .yzm>:nth-child(3){
+            flex: 2;
+            align-self: center;
+        }
+        .yzm-1{
+            width: 70%;
+            height: 1.7rem;
+            font-size: 1.5rem;
+        }
+        /*==========================================*/
+        #login>:nth-child(3){
+            flex: 1;
+            height: 100px;
+            display:flex;
+            box-sizing: border-box;
+        }
+        .dl,.zc{
+             width: 35%;
+             height: 40px;
+             background: darkcyan;
+             font-size: 1.5rem;
+             text-align: center;
+             line-height: 40px;
+             color: white;
+             align-self: center;
+             margin-left:12.5%;
+         }
+        .zc{
+            margin-left:5%;
+            margin-right:12.5%;
+        }
+    </style>
+</head>
+<body>
+    <div id="mask"></div>
+    <div id="login">
+        <div>
+            <div class="yh"></div>
+        </div>
+        <div>
+            <div class="yhm">
+                <div>用户名：</div>
+                <div><input type="text" class="yhm-1"></div>
+            </div>
+            <div class="mima">
+                <div>密&ensp;&ensp;码：</div>
+                <div><input type="password" class="mima-1"></div>
+            </div>
+            <div class="yzm">
+                <div>验证码：</div>
+                <div><input type="password" class="yzm-1"></div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <div class="dl">登录</div>
+            <div class="zc">注册</div>
+        </div>
+    </div>
+    <a href="http://www.baidu.com">百度</a>
+    <script>
+        var login=document.querySelector("#login");
+        var mask=document.querySelector("#mask");
+        center(login);
+        //把文档的宽度赋给mask
+        mask.style.width=document.body.clientWidth+"px";
+        //把文档的高度赋给mask
+        mask.style.height=document.body.clientHeight+"px";
+    </script>
+</body>
+</html>

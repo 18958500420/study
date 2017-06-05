@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="pifu2.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <h1>标题</h1>
+    <div class="demo"></div>
+    <script>
+        var link=document.querySelector("link");
+        //console.log(link);
+        //var num=2;
+        setInterval(function(){
+            link.href="pifu.css";
+            //console.log(num)
+        },1000);
+        setInterval(function(){
+            link.href="pifu2.css";
+            //console.log(num)
+        },2000)
+    </script>
+</body>
+</html>

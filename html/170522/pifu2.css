@@ -1,0 +1,10 @@
+h1{
+    color: red;
+}
+.demo{
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    background: url("timg.jpg");
+    background-size: 100%;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            height: 1500px;
+        }
+        #top:target{
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">顶部</div><br>
+    <img src="123.jpg"><br>
+    <a href="#top">回到顶部</a>
+    <div id="bottom">frr</div>
+    <button class="btn">js的跳转</button>
+    <script type="text/javascript">
+        var btn=document.querySelector(".btn");
+        btn.addEventListener("click",function(){
+            document.documentElement=0;
+            document.body.scrollTop=0;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 1500px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">button</button>
+    <script>
+        var btn=document.querySelector(".btn");
+        var timer=window.setTimeout(function(){
+            console.log(new Date().toLocaleDateString()+"a");
+        },3000);
+        console.log(timer);
+        var timer2=window.setTimeout(function(){
+            console.log(new Date().toLocaleDateString()+"b");
+        },3000);
+        console.log(timer2);
+        btn.addEventListener("click",function(){
+            clearTimeout(timer2)
+        });
+        /*window.setInterval(function(){
+            console.log(new Date().toDateString());
+        },1000);*/
+        /*name="tom";
+        console.log(window.name);
+        window.open("ad.html","newname","width=300,left=500,top=150")*/
+    </script>
+    <!--<img src="huoying.jpg">-->
+</body>
+</html>

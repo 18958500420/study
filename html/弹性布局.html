@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/com.js">
+
+    </script>
+    <style type="text/css">
+        .wrap{font-family: "微软雅黑", Arial, Helvetica, sans-serif;max-width:1000px;margin:0 auto;}
+        .box{ border: 1px solid black;}
+        .box dl{display: flex;}
+        .box dt{flex: 1; align-self: center;}
+        .box dt img{
+            width: 100%;
+            vertical-align:top;
+        }
+        .box dd:nth-child(2){
+            flex: 4;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: .2rem;
+            font-weight: 800;
+            padding: .1rem;
+            margin-left: .2rem;
+        }
+        .box dd:nth-child(3){
+            flex: 1;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <dl>
+                <dt><img src="../image/9-1F215101252-51.png"></dt>
+                <dd>
+                    <p>哈哈</p>
+                    <p>呵呵</p>
+                    <p>嘿嘿</p>
+                </dd>
+                <dd>&gt;</dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

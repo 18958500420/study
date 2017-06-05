@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="demo"><li>one</li><li>two</li><li>three</li><li>four</li></ul>
+<script>
+    var demo=document.querySelector(".demo");
+    //console.log(demo.childNodes);
+    console.log(demo.childNodes[0].firstChild.nodeValue);
+    /*for (i in demo.childNodes){
+        alert(demo.childNodes[i].nodeName);
+    }*/
+</script>
+</body>
+</html>

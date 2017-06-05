@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            width: 110px;
+            height: 50px;
+            background: #ccc;
+            border-radius: 25px;
+            margin: 100px auto;
+            position: relative;
+        }
+        #in1{
+            visibility: hidden;
+        }
+        #in1+label{
+            width:50px;
+            height:50px;
+            background: yellow;
+            transition: 1s;
+            position: absolute;
+            right: 0;
+            border-radius:25px;
+        }
+        #in1:checked+label{
+            right: 60px;
+            background: red;
+            box-shadow: 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="box">
+            <input type="checkbox" name="in1" id="in1" checked="checked">
+            <label for="in1"></label>
+        </div>
+    </div>
+</body>
+</html>

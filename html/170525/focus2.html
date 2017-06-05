@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<script>
+    var inputs=document.querySelectorAll("input");
+    //console.log(inputs);
+    //循环为input添加事件
+    inputs.forEach(function(value,index){
+        value.addEventListener("focus",function(){
+            this.style.background="lightyellow";
+        });
+        value.addEventListener("blur",function(){
+            this.style.background="#fff";
+        })
+    });
+</script>
+</body>
+</html>
